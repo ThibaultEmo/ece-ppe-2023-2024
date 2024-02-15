@@ -3,40 +3,16 @@ import fs from 'fs';
 import path from 'path';
 
 export default function handler(req, res) {
-  // Define the filename for the generated image
-  
-
-  /*
-  // Execute the Python script
-  const pythonProcess = spawn('python3', ['generate_image.py'], { cwd: path.join(process.cwd(), 'scripts') });
-
-  pythonProcess.on('close', (code) => {
-    if (code === 0) {
-      // Read the generated image file
-      fs.readFile(imagePath, (err, data) => {
-        if (err) {
-          console.error(err);
-          res.status(500).end();
-          return;
-        }
-
-        
-      });
-    } else {
-      console.error(`Python script exited with code ${code}`);
-      res.status(500).end();
-    }
-  });*/
 
   const imageMapPromise = new Promise((resolve, reject) => {
 		exec(
-			`python3 src/python_scripts/generate_map.py`,
+			`python3 src/python-maps/main.py 2050-07-16`,
 			(error, stdout, stderr) => {
 				if (error) {
 					console.error(`exec error: ${error}`);
 					reject(error);
 				}
-				const filename = 'generated_image.jpg';
+				const filename = 'tas-map.png';
       const imagePath = path.join(process.cwd(), 'public', filename);
       resolve(imagePath)
 			}
