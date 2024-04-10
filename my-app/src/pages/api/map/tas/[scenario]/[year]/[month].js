@@ -4,15 +4,24 @@ import path from 'path';
 
 export default function handler(req, res) {
 
-    const { date } = req.query;
-  
-  if (!date) {
-    return res.status(400).json({ error: "Date parameter is required"} );
+    const { scenario, year, month } = req.query;
+
+    if (!scenario) {
+    return res.status(400).json({ error: "Scenario parameter is required"} );
+  }
+
+  if (!year) {
+    return res.status(400).json({ error: "Year parameter is required"} );
+  }
+
+  if (!month) {
+    return res.status(400).json({ error: "Month parameter is required"} );
   }
 
   const imageMapPromise = new Promise((resolve, reject) => {
+    console.log(`python3 src/python-maps/tas/main.py ${scenario} ${year} ${month}`)
 		exec(
-			`python3 src/python-maps/main.py ${date}`,
+			`python3 src/python-maps/tas/main.py ${scenario} ${year} ${month}`,
 			(error, stdout, stderr) => {
 				if (error) {
 					console.error(`exec error: ${error}`);

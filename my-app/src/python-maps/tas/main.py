@@ -4,11 +4,15 @@ import cartopy.crs as ccrs
 import sys
 
 #file name & date neeeded
-if len(sys.argv) != 2:
-    raise ValueError("Missing argument. Usage: <file_name> <date>")
+if len(sys.argv) != 4:
+    raise ValueError("Missing argument. Usage: <file_name> <scenario> <year> <month>")
+
+scenario = sys.argv[1]
+year = sys.argv[2]
+month = sys.argv[3]
 
 # Specify the path to your NetCDF file
-nc_file_path = 'src/python-maps/franceDataset.nc'
+nc_file_path = f'src/python-maps/tas/{scenario}.nc'
 
 # Open the NetCDF file using xarray
 dataset = xr.open_dataset(nc_file_path)
@@ -16,7 +20,7 @@ dataset = xr.open_dataset(nc_file_path)
 # Extract near-surface air temperature data
 tas_kelvin = dataset['tas']
 
-selected_date = sys.argv[1]
+
 
 tas_selected_date_kelvin = tas_kelvin.sel(time=selected_date)
 
