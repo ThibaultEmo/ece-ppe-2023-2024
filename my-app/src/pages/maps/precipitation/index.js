@@ -30,12 +30,15 @@ const MyComponent = () => {
 
   return (
     <Layout>
+         <p className="text-4xl text-green-700 text-center">
+            Les précipitations
+          </p>
       <div>
 
-        <div class="h-screen flex flex-col items-center justify-center">
+        <div class="h-screen flex flex-col space-y-8 items-center justify-center">
           <div class="flex flex-row items-center space-x-8">
             <Image src={`/api/map/precipitation/${selectedScenario}/${selectedYear}/${selectedMonth}?timestamp=${timestamp}`} alt="Precipitation" width={1000} height={1000} />
-            <div class="flex flex-col ">
+            <div class="flex flex-col text-green-700 text-2xl space-y-8">
 
 
               <select value={selectedScenario} onChange={handleScenarioChange}>
@@ -66,7 +69,7 @@ const MyComponent = () => {
 
             </div>
           </div>
-          <p>Le fait que le réchauffement du climat entraîne des précipitations plus violentes peut sembler contre-intuitif. Le changement climatique peut pourtant non seulement rendre les endroits plus secs, mais également intensifier les précipitations. À mesure que l’air se réchauffe, la quantité de vapeur d’eau qu’il peut contenir augmente. Ce mécanisme peut rendre les tempêtes plus violentes. Et cette intensification devrait être plus ou moins homogène spatialement dans le monde.</p>
+          <p className='text-4xl'>Le fait que le réchauffement du climat entraîne des précipitations plus violentes peut sembler contre-intuitif. Le changement climatique peut pourtant non seulement rendre les endroits plus secs, mais également intensifier les précipitations. À mesure que l’air se réchauffe, la quantité de vapeur d’eau qu’il peut contenir augmente. Ce mécanisme peut rendre les tempêtes plus violentes. Et cette intensification devrait être plus ou moins homogène spatialement dans le monde.</p>
 
         </div>
 

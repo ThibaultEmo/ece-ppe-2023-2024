@@ -39,27 +39,22 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="text-center">
-              <Link href="/maps/" className="block py-2 pr-4 pl-3  border-0">Maps</Link>
+              <Link href="/maps/" className="block py-2 pr-4 pl-3  border-0">Cartes</Link>
             </li>
             <li className="text-center">
-              <Link href="/maps/tas/" className="block py-2 pr-4 pl-3  border-0">Temperature</Link>
+              <Link href="/maps/tas/" className="block py-2 pr-4 pl-3  border-0">Température</Link>
             </li>
             <li className="text-center">
-              <Link href="/maps/precipitation/" className="block py-2 pr-4 pl-3  border-0">Precipitation</Link>
-            </li>
-            <li className="text-center">
-              <Link href="/maps/sea-level/" className="block py-2 pr-4 pl-3  border-0">Sea level</Link>
+              <Link href="/maps/precipitation/" className="block py-2 pr-4 pl-3  border-0">Précipitations</Link>
             </li>
             <li className="text-center">
               <Link href="/agriculture/" className="block py-2 pr-4 pl-3  border-0">Agriculture</Link>
             </li>
             <li className="text-center">
-              <Link href="/natural-disaster/" className="block py-2 pr-4 pl-3  border-0">Natural disaster</Link>
+              <Link href="/natural-disaster/" className="block py-2 pr-4 pl-3  border-0">Catastrophes naturelles</Link>
             </li>
           </ul>
         </div>
-
-
       </div>
     </nav>
   )

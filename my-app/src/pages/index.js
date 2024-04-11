@@ -11,7 +11,7 @@ export default function Home() {
     >
       <Layout>
       <div className="flex flex-col space-y-16">
-          <p className="text-center">
+          <p className="text-4xl text-green-700 text-center">
             FranceVerte est le site regroupant le plus de données variées sur le changement climatique.
           </p>
           <div className="flex flex-col space-y-2 justify-center text-center items-center md:flex md:flex-row md:space-x-8">

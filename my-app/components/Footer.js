@@ -10,7 +10,7 @@ export default function Footer() {
           width={32}
           height={32}
           alt="Email icon" />
-        <p>Feel free to contact us</p>
+        <p className="text-green-700">N'hésitez pas à nous contacter !</p>
       </Link>
     </footer>
   )
