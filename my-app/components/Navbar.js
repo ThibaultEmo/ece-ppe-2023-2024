@@ -7,7 +7,7 @@ export default function Navbar() {
   
   return (
 
-    <nav className="bg-transparent border-b-4 border-dashed border-purple-700 dark:border-orange-600">
+    <nav className="bg-transparent border-b-4 border-dashed border-green-700 dark:border-green-600">
 
 
       <div className="flex flex-wrap max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl items-center justify-center mx-auto p-2">
@@ -33,13 +33,10 @@ export default function Navbar() {
             <li>
               <Link className="block py-2 pr-4 pl-3" href={'/'}>
                 <div className="flex flex-row space-x-2 place-items-center">
-                  <HomeIcon className="w-4 h-4 text-orange-600  md:w-6 md:h-6" />
-                  <p className="text-orange-600">FranceVerte</p>
+                  <HomeIcon className="w-4 h-4 text-green-600  md:w-6 md:h-6" />
+                  <p className="text-green-600">FranceVerte</p>
                 </div>
               </Link>
-            </li>
-            <li className="text-center">
-              <Link href="/" className="block py-2 pr-4 pl-3  ">Home</Link>
             </li>
             <li className="text-center">
               <Link href="/maps/" className="block py-2 pr-4 pl-3  border-0">Maps</Link>

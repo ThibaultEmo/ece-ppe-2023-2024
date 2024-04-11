@@ -55,7 +55,7 @@ tas_selected_date_celsius.plot(ax=ax, transform=ccrs.PlateCarree(), cmap='coolwa
 ax.coastlines()
 
 # Add title and labels
-plt.title(f'Near-surface air temperature on {month} {year} - {scenario} (°C)')
+plt.title(f'Temperature on {month} {year} - {scenario} (°C)')
 plt.xlabel('Longitude')
 plt.ylabel('Latitude')
 
