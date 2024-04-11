@@ -33,8 +33,8 @@ export default function Navbar() {
             <li>
               <Link className="block py-2 pr-4 pl-3" href={'/'}>
                 <div className="flex flex-row space-x-2 place-items-center">
-                  <HomeIcon className="w-4 h-4 text-orange-600 dark:text-purple-700 md:w-6 md:h-6" />
-                  <p className="text-orange-600 dark:text-purple-700 ">Climate change</p>
+                  <HomeIcon className="w-4 h-4 text-orange-600  md:w-6 md:h-6" />
+                  <p className="text-orange-600">FranceVerte</p>
                 </div>
               </Link>
             </li>
@@ -42,9 +42,23 @@ export default function Navbar() {
               <Link href="/" className="block py-2 pr-4 pl-3  ">Home</Link>
             </li>
             <li className="text-center">
-              <Link href="/map/tas" className="block py-2 pr-4 pl-3  border-0">Near-surface temperature map</Link>
+              <Link href="/maps/" className="block py-2 pr-4 pl-3  border-0">Maps</Link>
             </li>
-
+            <li className="text-center">
+              <Link href="/maps/tas/" className="block py-2 pr-4 pl-3  border-0">Temperature</Link>
+            </li>
+            <li className="text-center">
+              <Link href="/maps/precipitation/" className="block py-2 pr-4 pl-3  border-0">Precipitation</Link>
+            </li>
+            <li className="text-center">
+              <Link href="/maps/sea-level/" className="block py-2 pr-4 pl-3  border-0">Sea level</Link>
+            </li>
+            <li className="text-center">
+              <Link href="/agriculture/" className="block py-2 pr-4 pl-3  border-0">Agriculture</Link>
+            </li>
+            <li className="text-center">
+              <Link href="/natural-disaster/" className="block py-2 pr-4 pl-3  border-0">Natural disaster</Link>
+            </li>
           </ul>
         </div>
 

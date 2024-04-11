@@ -19,7 +19,6 @@ export default function handler(req, res) {
   }
 
   const imageMapPromise = new Promise((resolve, reject) => {
-    console.log(`python3 src/python-maps/tas/main.py ${scenario} ${year} ${month}`)
 		exec(
 			`python3 src/python-maps/tas/main.py ${scenario} ${year} ${month}`,
 			(error, stdout, stderr) => {
@@ -27,7 +26,7 @@ export default function handler(req, res) {
 					console.error(`exec error: ${error}`);
 					reject(error);
 				}
-				const filename = 'tas-map.png';
+				const filename = `tas-map-${scenario}-${month}-${year}.png`;
       const imagePath = path.join(process.cwd(), 'public', filename);
       resolve(imagePath)
 			}
